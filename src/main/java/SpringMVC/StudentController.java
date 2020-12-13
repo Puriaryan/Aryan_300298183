@@ -43,7 +43,7 @@ public class StudentController {
         service.addRecords(10006,"Johny Jocob",10006,"Johny Jacob", 3.0);
 
         model.clear();
-        return "redirect:/list-todos";
+        return "redirect:/list-records";
     }
 
 
@@ -56,9 +56,8 @@ public class StudentController {
         return "todo";
     }
 
-
-
-    @RequestMapping(value = "/update-todo", method = RequestMethod.POST)
+    //mapping the records to update
+    @RequestMapping(value = "/update-records", method = RequestMethod.POST)
     public String showUpdate(ModelMap model, @RequestParam String desc) {
 
 
@@ -67,7 +66,7 @@ public class StudentController {
 
         System.out.println(us);
 
-        service.deleteTodo(us);
+        service.deleteRecords(us);
 
         service.addRecords(us,"1", 10006,"Johny Jacobi",3.0);
 
@@ -78,6 +77,7 @@ public class StudentController {
     }
 
 
+    // mapping the records to delete
     @RequestMapping(value ="/delete-records", method = RequestMethod.GET)
     public String deleteRecords(ModelMap model, @RequestParam int id){
 
@@ -87,6 +87,5 @@ public class StudentController {
         model.clear();
         return "redirect:/list-todos";
     }
-// ?can u type anything? now?
 
 }

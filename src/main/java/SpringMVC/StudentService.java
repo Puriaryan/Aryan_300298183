@@ -6,17 +6,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class StudentService implements StudentInterface {
-    public DbConnection connection;
+    public Connection connection;
 
-    public DbConnection getConnection() {
+    public Connection getConnection() {
         return connection;
     }
 
-    public void setConnection(DbConnection connection) {
+    public void setConnection(Connection connection) {
         this.connection = connection;
     }
 
-    public StudentService(DbConnection connection) throws SQLException {
+    public StudentService(Connection connection) throws SQLException {
         this.connection = connection;
     }
 

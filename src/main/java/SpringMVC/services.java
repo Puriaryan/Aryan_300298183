@@ -38,7 +38,7 @@ public class services {
         records.add(new StudentData(id, user, snumber, name, gpa));
     }
 
-    public void deleteTodo(int id) {
+    public void deleteRecords(int id) {
         Iterator<StudentData> iterator = records.iterator();
         while (iterator.hasNext()) {
             StudentData todo = iterator.next();
